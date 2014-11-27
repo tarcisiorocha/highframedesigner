@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architecture name="COMANCHE.hfd">
+  <subarchitecture id="frontend" name="frontend" model="OpenCOM" host="localhost" x="30" y="60" width="543" height="338">
+    <component id="comp1" name="comanche.fraclet.Receiver" x="13" y="106" width="206" height="198">
+      <interface name="r" id="id1" />
+      <interface name="s" id="id2" />
+      <interface name="ia" id="id3" bindType="RMI" />
+    </component>
+    <component id="comp2" name="comanche.fraclet.Scheduler" x="302" y="117" width="218" height="129">
+      <interface name="s" id="id4" />
+    </component>
+    <bind startX="244" startY="214" endX="302" endY="214" idSubArch="frontend" idCompSource="comp1" idCompDestination="comp2" nmInterSource="s" nmInterDestination="s" />
+  </subarchitecture>
+  <subarchitecture id="backend" name="backend" model="Fractal" host="localhost" x="636" y="66" width="600" height="545">
+    <component id="comp1" name="comanche.fraclet.Analyzer" x="33" y="183" width="206" height="189">
+      <interface name="a" id="id5" bindType="RMI" />
+      <interface name="id" id="id6" />
+      <interface name="l" id="id7" />
+    </component>
+    <component id="comp2" name="comanche.fraclet.Logger" x="42" y="389" width="196" height="100">
+      <interface name="l" id="id8" />
+    </component>
+    <component id="comp3" name="comanche.fraclet.Dispatcher" x="327" y="235" width="219" height="175">
+      <interface name="id" id="id9" />
+      <interface name="ifh" id="id10" />
+      <interface name="ieh" id="id11" />
+    </component>
+    <component id="comp4" name="comanche.fraclet.FileHandler" x="331" y="114" width="217" height="100">
+      <interface name="f" id="id12" />
+    </component>
+    <component id="comp5" name="comanche.fraclet.ErrorHandler" x="325" y="426" width="222" height="100">
+      <interface name="e" id="id13" />
+    </component>
+    <bind startX="264" startY="338" endX="263" endY="457" idSubArch="backend" idCompSource="comp1" idCompDestination="comp2" nmInterSource="l" nmInterDestination="l" />
+    <bind startX="264" startY="301" endX="327" endY="301" idSubArch="backend" idCompSource="comp1" idCompDestination="comp3" nmInterSource="id" nmInterDestination="id" />
+    <bind startX="573" startY="182" endX="571" endY="339" idSubArch="backend" idCompSource="comp4" idCompDestination="comp3" nmInterSource="f" nmInterDestination="ifh" />
+    <bind startX="571" startY="377" endX="572" endY="494" idSubArch="backend" idCompSource="comp3" idCompDestination="comp5" nmInterSource="ieh" nmInterDestination="e" />
+  </subarchitecture>
+  <externalBind startX="274" startY="314" endX="669" endY="314" idSubArchSource="frontend" idSubArchDestination="backend" idCompSource="comp1" idCompDestination="comp1" nmInterSource="ia" nmInterDestination="a" typeBinding="RMI" />
+</architecture>

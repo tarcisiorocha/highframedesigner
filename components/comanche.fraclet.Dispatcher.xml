@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="comanche.fraclet.Dispatcher">
+  <interfaces>
+    <interface name="id" signature="comanche.fraclet.IDispatcher" type="P" />
+    <interface name="ifh" signature="comanche.fraclet.IFileHandler" type="R" />
+    <interface name="ieh" signature="comanche.fraclet.IErrorHandler" type="R" />
+  </interfaces>
+</component>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plan>
+  <deployment idsubarchitecture="frontend" componentmodel="Fractal" host="localhost" />
+  <deployment idsubarchitecture="backend" componentmodel="Fractal" host="localhost" />
+  <remotebindind idexportedclientinterface="id3" idexportedserverinterface="id5" bindingtype="RMI" />
+</plan>

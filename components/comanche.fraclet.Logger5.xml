@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="comanche.fraclet.Logger5">
+  <interfaces>
+    <interface name="l5" signature="comanche.fraclet.ILogger" type="P" />
+  </interfaces>
+</component>

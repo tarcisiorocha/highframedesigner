@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architecture>
+  <subarchitecture idsubarchitecture="frontend">
+    <component id="comp1" name="comanche.fraclet.Receiver">
+      <providedinterface idinterface="id1" name="r" signature="java.lang.Runnable" />
+      <requiredinterface idinterface="id2" name="s" signature="comanche.fraclet.IScheduler" />
+      <requiredinterface idinterface="id3" name="ia" signature="comanche.fraclet.IAnalyzer" />
+    </component>
+    <component id="comp2" name="comanche.fraclet.Scheduler">
+      <providedinterface idinterface="id4" name="s" signature="comanche.fraclet.IScheduler" />
+    </component>
+    <binding clientcomponent="comp1" clientinterface="id2" servercomponent="comp2" serverinterface="id4" />
+    <exportedinterface idinterface="id3" />
+  </subarchitecture>
+  <subarchitecture idsubarchitecture="backend">
+    <component id="comp1" name="comanche.fraclet.Analyzer">
+      <providedinterface idinterface="id5" name="a" signature="comanche.fraclet.IAnalyzer" />
+      <requiredinterface idinterface="id6" name="id" signature="comanche.fraclet.IDispatcher" />
+      <requiredinterface idinterface="id7" name="l" signature="comanche.fraclet.ILogger" />
+    </component>
+    <component id="comp2" name="comanche.fraclet.Logger">
+      <providedinterface idinterface="id8" name="l" signature="comanche.fraclet.ILogger" />
+    </component>
+    <component id="comp3" name="comanche.fraclet.Dispatcher">
+      <providedinterface idinterface="id9" name="id" signature="comanche.fraclet.IDispatcher" />
+      <requiredinterface idinterface="id10" name="ifh" signature="comanche.fraclet.IFileHandler" />
+      <requiredinterface idinterface="id11" name="ieh" signature="comanche.fraclet.IErrorHandler" />
+    </component>
+    <component id="comp4" name="comanche.fraclet.FileHandler">
+      <providedinterface idinterface="id12" name="f" signature="comanche.fraclet.IFileHandler" />
+    </component>
+    <component id="comp5" name="comanche.fraclet.ErrorHandler">
+      <providedinterface idinterface="id13" name="e" signature="comanche.fraclet.IErrorHandler" />
+    </component>
+    <binding clientcomponent="comp1" clientinterface="id7" servercomponent="comp2" serverinterface="id8" />
+    <binding clientcomponent="comp1" clientinterface="id6" servercomponent="comp3" serverinterface="id9" />
+    <binding clientcomponent="comp3" clientinterface="id10" servercomponent="comp4" serverinterface="id12" />
+    <binding clientcomponent="comp3" clientinterface="id11" servercomponent="comp5" serverinterface="id13" />
+    <exportedinterface idinterface="id5" />
+  </subarchitecture>
+</architecture>

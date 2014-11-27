@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="comanche.fraclet.Scheduler12">
+  <interfaces>
+    <interface name="s12" signature="comanche.fraclet.IScheduler" type="P" />
+  </interfaces>
+</component>

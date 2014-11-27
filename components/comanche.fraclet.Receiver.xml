@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="comanche.fraclet.Receiver">
+  <interfaces>
+    <interface name="r" signature="highframe.core.Runner" type="P" />
+    <interface name="s" signature="comanche.fraclet.IScheduler" type="R" />
+    <interface name="ia" signature="comanche.fraclet.IAnalyzer" type="R" />
+  </interfaces>
+</component>

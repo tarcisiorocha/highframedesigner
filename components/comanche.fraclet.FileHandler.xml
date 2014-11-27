@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="comanche.fraclet.FileHandler">
+  <interfaces>
+    <interface name="f" signature="comanche.fraclet.IFileHandler" type="P" />
+  </interfaces>
+</component>

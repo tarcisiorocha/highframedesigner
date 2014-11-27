@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+    <subArhcPath value="C:\eclipse\workspace\InterfaceComponent" />
+    <deployPath value="C:\eclipse\workspace\InterfaceComponent" />
+    <componentsPath value="C:\eclipse\workspace\InterfaceComponent\components" />
+    <componentServerAddress value="http://localhost:8889" />
+</properties>

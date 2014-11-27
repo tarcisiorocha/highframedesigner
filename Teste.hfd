@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architecture name="Teste.hfd">
+  <subarchitecture id="subArch0" name="subarc1" model="Fractal" host="localhost" x="63" y="45" width="600" height="400">
+    <component id="comp1" name="clientImpl" x="59" y="134" width="180" height="125">
+      <interface name="r" id="i2" />
+      <interface name="s" id="i1" />
+    </component>
+    <component id="comp2" name="serverImpl" x="340" y="136" width="180" height="125">
+      <interface name="s" id="i3" />
+    </component>
+    <bind startX="264" startY="230" endX="340" endY="229" idSubArch="subArch0" idCompSource="comp1" idCompDestination="comp2" nmInterSource="s" nmInterDestination="s" />
+  </subarchitecture>
+</architecture>

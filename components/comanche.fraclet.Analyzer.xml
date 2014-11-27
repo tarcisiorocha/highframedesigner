@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="comanche.fraclet.Analyzer">
+  <interfaces>
+    <interface name="a" signature="comanche.fraclet.IAnalyzer" type="P" />
+    <interface name="id" signature="comanche.fraclet.IDispatcher" type="R" />
+    <interface name="l" signature="comanche.fraclet.ILogger" type="R" />
+  </interfaces>
+</component>
